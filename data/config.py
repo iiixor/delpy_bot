@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-BOT_TOKEN = str(os.getenv("5372481674:AAFkPNx4NiwPjxT6OXLtncC6PeTY9KIOq1w"))
+BOT_TOKEN = str(os.getenv("BOT_TOKEN"))
 admins = [
     362089194
 ]
