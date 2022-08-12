@@ -5,6 +5,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 BOT_TOKEN = str(os.getenv("BOT_TOKEN"))
+
+# ВАНЯ ДОБАВЬ СВОЙ ЛОГИН
+
 admins = [
     837095301
     832723559
