@@ -10,7 +10,11 @@ menu = ReplyKeyboardMarkup(
             KeyboardButton(text='Посмотреть портфолио')
         ],
         [
-            KeyboardButton(text='Перейти на сайт')
+            KeyboardButton(text='Перейти на сайт'),
+            KeyboardButton(text='Поменять язык')
+        ],
+        [
+            KeyboardButton(text='Оставить отзыв')
         ]
     ],
     resize_keyboard=True

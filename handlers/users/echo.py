@@ -7,7 +7,7 @@ from loader import dp
 
 @dp.message_handler()
 async def bot_echo(message: types.Message):
-    await message.answer(f'Cам ты {message.text}')
+    await message.answer(f'К сожалению, я не знаю такой команды')
 
     # оформить, как ответ на конретное сообщение
     # await message.reply(f'Cам ты {message.text}')
