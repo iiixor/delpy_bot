@@ -17,5 +17,6 @@ menu = ReplyKeyboardMarkup(
             KeyboardButton(text='Оставить отзыв')
         ]
     ],
+    # делаем нормальный размер клавиатуры
     resize_keyboard=True
 )

@@ -4,6 +4,7 @@ from keyboards.default import switch_language
 from keyboards.default import menu
 
 
+# если в боте сообщение Поменять язык или Switch language
 @dp.message_handler(text=('Поменять язык' or 'Switch language'))
 async def bot_switch_language(message: types.Message):
     text = 'Выберете язык'
@@ -12,13 +13,19 @@ async def bot_switch_language(message: types.Message):
     await message.answer(text, reply_markup=switch_language)
 
 
+# после шага выше спавняться кнопки, которые заданы в
+# keyboads -> default -> switch_language
+
+
+# если Русский
 @dp.message_handler(text=('Русский'))
 async def bot_get_russian(message: types.Message):
-    text = 'Z'
+    text = '# ДОБАВИТЬ ФУНКЦИОНАЛ'
     await message.answer(text, reply_markup=menu)
 
 
+# если English
 @dp.message_handler(text=('English'))
 async def bot_get_russian(message: types.Message):
-    text = 'Я ОСУЖДАЮ'
+    text = '# ДОБАВИТЬ ФУНКЦИОНАЛ'
     await message.answer(text, reply_markup=menu)

@@ -1,5 +1,6 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
+
 switch_language = ReplyKeyboardMarkup(
     keyboard=[
         [
