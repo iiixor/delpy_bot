@@ -9,6 +9,3 @@ async def bot_info(message: types.Message):
     photo = '/home/egor/Documents/github/delpy_bot/media/Delpy.png'
     await message.answer_photo(types.InputFile(photo))
     await message.answer(text)
-
-    # как удалить сообщение удаления сообщения
-    # await message.answer(text).delete()
