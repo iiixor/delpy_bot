@@ -5,6 +5,7 @@ from .portfolio import dp
 from .link import dp
 from .switch_language import dp
 from .review import dp
+from .price import dp
 from .echo import dp
 
 

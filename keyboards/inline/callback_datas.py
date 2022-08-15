@@ -13,4 +13,6 @@ poll_callback = CallbackData("poll", "platform")
 
 review_callback = CallbackData("review", "platform")
 
+price_callback = CallbackData("price", "type")
+
 # то же почти везде копи-паст)))))

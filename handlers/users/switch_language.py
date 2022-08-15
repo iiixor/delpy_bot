@@ -23,7 +23,7 @@ async def bot_switch_language(message: types.Message):
 @dp.callback_query_handler(switch_callback.filter(language='russian'))
 async def bot_get_russian(call: CallbackQuery, callback_data: dict):
     text = '# ДОБАВИТЬ ФУНКЦИОНАЛ'
-    await call.answer(text, show_alert=True)
+    await call.answer(text)
     print(f'callback_data_dict = {callback_data}')
     language = callback_data.get('language')
     await call.message.answer(f"Вы поменяли язык на Русский")
