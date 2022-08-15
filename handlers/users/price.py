@@ -5,10 +5,11 @@ from aiogram.types import CallbackQuery
 
 from keyboards.inline.inline_switсh_language import *
 from keyboards.inline.callback_datas import *
+from filters.emoji import *
 
 
 # @dp.message_handler ловит только сообщение 'Оставить отзыв'
-@dp.message_handler(text='Прайс')
+@dp.message_handler(text=f'Прайс {emoji_abacus}')
 async def bot_portfolio(message: types.Message):
     # задаем текст, который будем выводить
     text = f"Выберете одну из услуг:"
@@ -27,7 +28,7 @@ async def bot_portfolio(message: types.Message):
 # это опициональный параметр
 async def bot_get_platform_1(call: CallbackQuery, callback_data: dict):
     # задаем текст, который будет присылаться в алерте
-    text = [f"<b>Разработка Telеgram ботов со следующим функционалом:</b>",
+    text = [f"<b>Разработка Telеgram ботов со следующим функционалом:</b> {emoji_robot}",
             "- Размещение на собственном хостинге",
             "- Подключение базы данных SQL",
             "- Настройка переадресации",
@@ -41,7 +42,7 @@ async def bot_get_platform_1(call: CallbackQuery, callback_data: dict):
 # это опициональный параметр
 async def bot_get_platform_2(call: CallbackQuery, callback_data: dict):
     # задаем текст, который будет присылаться в алерте
-    text = [f"<b>Полная работа с Google Таблицами:</b>",
+    text = [f"<b>Полная работа с Google Таблицами:</b> {emoji_statistics}",
             "- Разработка сводных таблиц",
             "- Автоматизация бизнес процессов",
             "- Работа с API через Python",

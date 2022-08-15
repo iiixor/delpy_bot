@@ -5,10 +5,11 @@ from aiogram.types import CallbackQuery
 
 from keyboards.inline.inline_switсh_language import *
 from keyboards.inline.callback_datas import *
+from filters.emoji import *
 
 
 # @dp.message_handler ловит только сообщение 'Оставить отзыв'
-@dp.message_handler(text='Отзывы')
+@dp.message_handler(text=f'Отзывы {emoji_star}')
 async def bot_portfolio(message: types.Message):
     # задаем текст, который будем выводить
     text = 'Выберете одну из кнопок:'

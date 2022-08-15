@@ -2,6 +2,7 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
 from keyboards.inline.callback_datas import *
+from filters.emoji import *
 
 
 # пишем ссылки для тех кнопок, которые перекидывают на ссылки
@@ -18,10 +19,10 @@ ADMIN_LINK = "https://t.me/wywmusic"
 
 switch_language = InlineKeyboardMarkup(row_width=1, inline_keyboard=[
         [
-            InlineKeyboardButton(text='Русский', callback_data=switch_callback.new(language='russian'))
+            InlineKeyboardButton(text=f'Русский {emoji_ruflag}', callback_data=switch_callback.new(language='russian'))
         ],
         [
-            InlineKeyboardButton(text='English', callback_data="switcher:english")
+            InlineKeyboardButton(text=f'English {emoji_engflag}', callback_data="switcher:english")
         ]
     ]
 )
@@ -31,13 +32,13 @@ switch_language = InlineKeyboardMarkup(row_width=1, inline_keyboard=[
 
 media_buttons = InlineKeyboardMarkup(row_width=2, inline_keyboard=[
         [
-            InlineKeyboardButton(text='Git Hub', callback_data=media_callback.new(platform='git_hub'), url=GIT_HUB_LINK)
+            InlineKeyboardButton(text=f'Git Hub {emoji_cat}', callback_data=media_callback.new(platform='git_hub'), url=GIT_HUB_LINK)
         ],
         [
-            InlineKeyboardButton(text='Kwork', callback_data="media:kwork", url=KWORK_LINK)
+            InlineKeyboardButton(text=f'Kwork {emoji_chain}', callback_data="media:kwork", url=KWORK_LINK)
         ],
         [
-            InlineKeyboardButton(text='Задать вопрос', callback_data="media:answer", url=ADMIN_LINK)
+            InlineKeyboardButton(text=f'Задать вопрос {emoji_questionmark}', callback_data="media:answer", url=ADMIN_LINK)
         ]
     ]
 )
@@ -66,10 +67,10 @@ review_buttons = InlineKeyboardMarkup(row_width=1, inline_keyboard=[
 
 price_buttons = InlineKeyboardMarkup(row_width=2, inline_keyboard=[
         [
-            InlineKeyboardButton(text='Разработка Telegram ботов', callback_data=price_callback.new(type='TG_Bots'))
+            InlineKeyboardButton(text=f'Разработка Telegram ботов {emoji_robot}', callback_data=price_callback.new(type='TG_Bots'))
         ],
         [
-            InlineKeyboardButton(text='Работа с API Google Sheets', callback_data="price:ggsh_api")
+            InlineKeyboardButton(text=f'Работа с API Google Sheets {emoji_statistics}', callback_data="price:ggsh_api")
         ]
     ]
 )

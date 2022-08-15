@@ -5,10 +5,11 @@ from aiogram.types import CallbackQuery
 from keyboards.inline.inline_switсh_language import switch_language
 from keyboards.inline.callback_datas import switch_callback
 from keyboards.default import menu
+from filters.emoji import *
 
 
 # если в боте сообщение Поменять язык или Switch language
-@dp.message_handler(text=('Поменять язык' or 'Switch language'))
+@dp.message_handler(text=f'Поменять язык {emoji_ruflag}')
 async def bot_switch_language(message: types.Message):
     text = 'Выберете язык:'
     # задаем текст, который будем выводить (в переменную url)
