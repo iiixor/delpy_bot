@@ -4,7 +4,6 @@ from aiogram.dispatcher.filters.builtin import CommandStart
 from loader import dp
 # достаем menu из дир-и delpy_bot -> keyboards -> default
 from keyboards.default import menu
-from filters.emoji import *
 
 
 # @dp.message_handler ловит только комманду /start
@@ -15,4 +14,4 @@ async def bot_start(message: types.Message):
     # при вводе /start также появляется menu с кнпоками, благодаря
     # reply_markup=menu
     # menu указывается в keyboards->default->menu
-    await message.answer(f'<b>Привет</b>, {message.from_user.full_name} {emoji_waving_hand}', reply_markup=menu)
+    await message.answer(f'<b>Привет</b>, {message.from_user.full_name}!', reply_markup=menu)
