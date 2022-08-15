@@ -1,12 +1,13 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
+from filter.emoji import *
 # создаем кнопки
 # в keyboard находится двумерный массив
 # в прицнипе как матрицой можно задаавать ряды строки кнопкам
 menu = ReplyKeyboardMarkup(
     keyboard=[
         [
-            KeyboardButton(text='Получить информацию'),
+            KeyboardButton(text=f'Получить информацию {emoji_information}'),
             KeyboardButton(text='Посмотреть портфолио')
         ],
         [
