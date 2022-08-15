@@ -10,11 +10,11 @@ menu = ReplyKeyboardMarkup(
             KeyboardButton(text='Посмотреть портфолио')
         ],
         [
-            KeyboardButton(text='Перейти на сайт'),
+            KeyboardButton(text='Пройти опрос'),
             KeyboardButton(text='Поменять язык')
         ],
         [
-            KeyboardButton(text='Оставить отзыв')
+            KeyboardButton(text='Отзывы')
         ]
     ],
     # делаем нормальный размер клавиатуры
