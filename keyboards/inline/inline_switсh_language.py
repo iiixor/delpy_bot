@@ -5,8 +5,9 @@ from keyboards.inline.callback_datas import *
 
 
 # пишем ссылки для тех кнопок, которые перекидывают на ссылки
-GIT_HUB_LINK = "https://github.com/wywdelpy/delpy_bot"
+GIT_HUB_LINK = "https://github.com/wywdelpy"
 KWORK_LINK = "https://kwork.ru/user/alex_odin"
+ADMIN_LINK = "https://t.me/wywmusic"
 
 # по своей структуре очень похоже на созадние обычных кнопок
 # добавляем клавиатуру и передаем в нее метод inline_keyboard
@@ -24,7 +25,6 @@ switch_language = InlineKeyboardMarkup(row_width=1, inline_keyboard=[
         ]
     ]
 )
-
 # по сути то же самое, что сверху
 # однако тут обратите внимание, что еще передается url, данный параметр
 # при нажатии кнопку пересылатет по ссылке
@@ -35,6 +35,9 @@ media_buttons = InlineKeyboardMarkup(row_width=2, inline_keyboard=[
         ],
         [
             InlineKeyboardButton(text='Kwork', callback_data="media:kwork", url=KWORK_LINK)
+        ],
+        [
+            InlineKeyboardButton(text='Задать вопрос', callback_data="media:answer", url=ADMIN_LINK)
         ]
     ]
 )

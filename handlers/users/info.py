@@ -16,4 +16,5 @@ async def bot_info(message: types.Message):
     # методом message.answer_photo отправляем фото и передаем туда photo
     await message.answer_photo(types.InputFile(photo))
     # методом message.answer отправляем текст и передаем туда text
-    await message.answer(text, reply_markup=media_buttons)
+    await message.answer(text)
+    await message.answer(f"Контакты:", reply_markup=media_buttons)
