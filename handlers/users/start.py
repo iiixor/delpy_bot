@@ -5,7 +5,7 @@ from loader import dp
 # достаем menu из дир-и delpy_bot -> keyboards -> default
 from keyboards.default import menu
 
-emoji = = u'\U0001F4A8'
+emoji = u'\U0001F4A8'
 
 # @dp.message_handler ловит только комманду /start
 @dp.message_handler(CommandStart())
