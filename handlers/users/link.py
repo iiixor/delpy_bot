@@ -8,7 +8,7 @@ from keyboards.inline.callback_datas import *
 
 
 # @dp.message_handler ловит только сообщение 'Перейти на сайт'
-@dp.message_handler(text='Пройти опрос')
+@dp.message_handler(text='Пройти опрос \ud83d\udcdd')
 async def bot_link(message: types.Message):
     # задаем текст, который будем выводить (в переменную url)
     text = 'Перейдите по одной из ссылок ниже:'

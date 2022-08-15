@@ -7,14 +7,14 @@ from keyboards.inline.callback_datas import *
 
 
 # @dp.message_handler ловит только сообщение 'Получить информацию'
-@dp.message_handler(text='Получить информацию')
+@dp.message_handler(text='Получить информацию \ud83d\udccc')
 async def bot_info(message: types.Message):
     # перменной text присваиваем строку, которую в дальнешем будем выводить
-    text = f'Добро пожаловать в студию разработки Delpy Studio!\n\n# НАПИСАТЬ ТЕКСТ'
+    text = f'<b>Добро пожаловать в студию разработки Delpy Studio</b> \ud83d\udc68\u200d\ud83d\udcbb \n\n# НАПИСАТЬ ТЕКСТ'
     # в переменную photo присваиваем фото(как абсолютный путь), которое в дальнешем будем отправлять
     photo = '/home/egor/Documents/github/delpy_bot/media/Delpy.png'
     # методом message.answer_photo отправляем фото и передаем туда photo
     await message.answer_photo(types.InputFile(photo))
     # методом message.answer отправляем текст и передаем туда text
     await message.answer(text)
-    await message.answer(f"Контакты:", reply_markup=media_buttons)
+    await message.answer(f"<b>Контакты:</b> \ud83d\udcde", reply_markup=media_buttons)
