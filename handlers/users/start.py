@@ -14,4 +14,4 @@ async def bot_start(message: types.Message):
     # при вводе /start также появляется menu с кнпоками, благодаря
     # reply_markup=menu
     # menu указывается в keyboards->default->menu
-    await message.answer(f'<b>Привет</b>, {message.from_user.full_name}!', reply_markup=menu)
+    await message.answer(f'<b>Привет</b> :clown:, {message.from_user.full_name}!', reply_markup=menu)
