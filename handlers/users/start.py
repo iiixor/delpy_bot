@@ -6,6 +6,7 @@ from loader import dp
 from keyboards.default import menu
 from filters.emoji import *
 
+emoji = u'\U0001F4A8'
 
 # @dp.message_handler ловит только комманду /start
 @dp.message_handler(CommandStart())
