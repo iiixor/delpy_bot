@@ -8,7 +8,7 @@ from keyboards.inline.callback_datas import *
 
 
 # @dp.message_handler ловит только сообщение 'Оставить отзыв'
-@dp.message_handler(text='Отзывы \u2b50\ufe0f')
+@dp.message_handler(text='Отзывы')
 async def bot_portfolio(message: types.Message):
     # задаем текст, который будем выводить
     text = 'Выберете одну из кнопок:'

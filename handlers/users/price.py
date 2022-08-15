@@ -8,7 +8,7 @@ from keyboards.inline.callback_datas import *
 
 
 # @dp.message_handler ловит только сообщение 'Оставить отзыв'
-@dp.message_handler(text='Прайс \ud83e\uddee')
+@dp.message_handler(text='Прайс')
 async def bot_portfolio(message: types.Message):
     # задаем текст, который будем выводить
     text = f"Выберете одну из услуг:"
@@ -27,7 +27,7 @@ async def bot_portfolio(message: types.Message):
 # это опициональный параметр
 async def bot_get_platform_1(call: CallbackQuery, callback_data: dict):
     # задаем текст, который будет присылаться в алерте
-    text = [f"<b>Разработка Telеgram ботов со следующим функционалом:</b> \ud83e\udd16",
+    text = [f"<b>Разработка Telеgram ботов со следующим функционалом:</b>",
             "- Размещение на собственном хостинге",
             "- Подключение базы данных SQL",
             "- Настройка переадресации",
@@ -41,7 +41,7 @@ async def bot_get_platform_1(call: CallbackQuery, callback_data: dict):
 # это опициональный параметр
 async def bot_get_platform_2(call: CallbackQuery, callback_data: dict):
     # задаем текст, который будет присылаться в алерте
-    text = [f"<b>Полная работа с Google Таблицами:</b> \ud83d\udcca",
+    text = [f"<b>Полная работа с Google Таблицами:</b>",
             "- Разработка сводных таблиц",
             "- Автоматизация бизнес процессов",
             "- Работа с API через Python",

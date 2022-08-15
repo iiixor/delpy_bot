@@ -18,10 +18,10 @@ ADMIN_LINK = "https://t.me/wywmusic"
 
 switch_language = InlineKeyboardMarkup(row_width=1, inline_keyboard=[
         [
-            InlineKeyboardButton(text='Русский \ud83c\uddf7\ud83c\uddfa', callback_data=switch_callback.new(language='russian'))
+            InlineKeyboardButton(text='Русский', callback_data=switch_callback.new(language='russian'))
         ],
         [
-            InlineKeyboardButton(text='English \ud83c\uddec\ud83c\udde7', callback_data="switcher:english")
+            InlineKeyboardButton(text='English', callback_data="switcher:english")
         ]
     ]
 )
@@ -31,13 +31,13 @@ switch_language = InlineKeyboardMarkup(row_width=1, inline_keyboard=[
 
 media_buttons = InlineKeyboardMarkup(row_width=2, inline_keyboard=[
         [
-            InlineKeyboardButton(text='Git Hub \ud83d\ude38', callback_data=media_callback.new(platform='git_hub'), url=GIT_HUB_LINK)
+            InlineKeyboardButton(text='Git Hub', callback_data=media_callback.new(platform='git_hub'), url=GIT_HUB_LINK)
         ],
         [
-            InlineKeyboardButton(text='Kwork \ud83d\udd17', callback_data="media:kwork", url=KWORK_LINK)
+            InlineKeyboardButton(text='Kwork', callback_data="media:kwork", url=KWORK_LINK)
         ],
         [
-            InlineKeyboardButton(text='Задать вопрос \u2754', callback_data="media:answer", url=ADMIN_LINK)
+            InlineKeyboardButton(text='Задать вопрос', callback_data="media:answer", url=ADMIN_LINK)
         ]
     ]
 )
@@ -66,10 +66,10 @@ review_buttons = InlineKeyboardMarkup(row_width=1, inline_keyboard=[
 
 price_buttons = InlineKeyboardMarkup(row_width=2, inline_keyboard=[
         [
-            InlineKeyboardButton(text='Разработка Telegram ботов \ud83e\udd16', callback_data=price_callback.new(type='TG_Bots'))
+            InlineKeyboardButton(text='Разработка Telegram ботов', callback_data=price_callback.new(type='TG_Bots'))
         ],
         [
-            InlineKeyboardButton(text='Работа с API Google Sheets \ud83d\udcca', callback_data="price:ggsh_api")
+            InlineKeyboardButton(text='Работа с API Google Sheets', callback_data="price:ggsh_api")
         ]
     ]
 )
