@@ -1,5 +1,6 @@
 from .help import dp
 from .start import dp
+from .testing import dp
 from .info import dp
 from .portfolio import dp
 from .link import dp
