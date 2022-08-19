@@ -1,5 +1,5 @@
 from aiogram import types
-from loader import dp
+from loader import dp, bot
 
 
 from keyboards.inline.inline_switсh_language import *
@@ -18,3 +18,15 @@ async def bot_info(message: types.Message):
     await message.answer_photo(types.InputFile(photo))
     # методом message.answer отправляем текст и передаем туда text
     await message.answer(text, reply_markup=media_buttons)
+    # await bot.delete_message(message.chat.id, message.message_id)
+
+
+@dp.message_handler()
+async def bot_delete(message: types.Message):
+    await bot.delete_message(message.chat.id, message.message_id-1)
+
+
+#@dp.message_handler()
+# async def bot_delete(message: types.Message):
+#     if message.from_user.id == (await bot.me).id:
+#         await bot.delete_message(message.)

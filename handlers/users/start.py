@@ -1,7 +1,7 @@
 from aiogram import types
 from aiogram.dispatcher.filters.builtin import CommandStart
 
-from loader import dp
+from loader import dp, bot
 # достаем menu из дир-и delpy_bot -> keyboards -> default
 from keyboards.default import menu
 from filters.emoji import *
@@ -16,3 +16,9 @@ async def bot_start(message: types.Message):
     # reply_markup=menu
     # menu указывается в keyboards->default->menu
     await message.answer(f'<b>Привет</b>, {message.from_user.full_name} {emoji_waving_hand}', reply_markup=menu)
+
+
+# @dp.message_handler()
+# async def bot_delete(message: types.Message):
+#     if message.from_user.id == (await bot.me).id:
+#         await message.delete()

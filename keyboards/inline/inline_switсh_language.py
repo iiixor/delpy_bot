@@ -9,6 +9,7 @@ from filters.emoji import *
 GIT_HUB_LINK = "https://github.com/wywdelpy"
 KWORK_LINK = "https://kwork.ru/user/alex_odin"
 ADMIN_LINK = "https://t.me/wywmusic"
+GOOGLE_FORM_LINK = ''
 
 # по своей структуре очень похоже на созадние обычных кнопок
 # добавляем клавиатуру и передаем в нее метод inline_keyboard
@@ -26,9 +27,10 @@ switch_language = InlineKeyboardMarkup(row_width=1, inline_keyboard=[
         ]
     ]
 )
+
 # по сути то же самое, что сверху
 # однако тут обратите внимание, что еще передается url, данный параметр
-# при нажатии кнопку пересылатет по ссылке
+# при нажатии кнопку пересылает по ссылке
 
 media_buttons = InlineKeyboardMarkup(row_width=2, inline_keyboard=[
         [
@@ -38,7 +40,8 @@ media_buttons = InlineKeyboardMarkup(row_width=2, inline_keyboard=[
             InlineKeyboardButton(text=f'Kwork {emoji_chain}', callback_data="media:kwork", url=KWORK_LINK)
         ],
         [
-            InlineKeyboardButton(text=f'Задать вопрос {emoji_questionmark}', callback_data="media:answer", url=ADMIN_LINK)
+            InlineKeyboardButton(text=f'Задать вопрос {emoji_questionmark}', callback_data="media:answer", url=ADMIN_LINK),
+            InlineKeyboardButton(text=f'Рассказать друзьям 💁‍♀️', switch_inline_query='Вот, как разрабатывают ботов!')
         ]
     ]
 )
