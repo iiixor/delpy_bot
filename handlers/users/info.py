@@ -20,10 +20,12 @@ async def bot_info(message: types.Message):
     await message.answer(text, reply_markup=media_buttons)
     # await bot.delete_message(message.chat.id, message.message_id)
 
+# УДАЛЕНИЕ СООБЕЩНИЙ
 
 @dp.message_handler()
 async def bot_delete(message: types.Message):
-    await bot.delete_message(message.chat.id, message.message_id-1)
+    await bot.delete_message(message.chat.id, message.message_id-2)
+
 
 
 #@dp.message_handler()
