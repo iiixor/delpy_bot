@@ -9,7 +9,7 @@ from filters.emoji import *
 GIT_HUB_LINK = "https://github.com/wywdelpy"
 KWORK_LINK = "https://kwork.ru/user/alex_odin"
 ADMIN_LINK = "https://t.me/wywmusic"
-GOOGLE_FORM_LINK = ''
+GOOGLE_FORM_LINK = 'https://forms.gle/tvdUTDby1CVD4yno7'
 
 # по своей структуре очень похоже на созадние обычных кнопок
 # добавляем клавиатуру и передаем в нее метод inline_keyboard
@@ -50,7 +50,7 @@ media_buttons = InlineKeyboardMarkup(row_width=2, inline_keyboard=[
 
 poll_buttons = InlineKeyboardMarkup(row_width=1, inline_keyboard=[
         [
-            InlineKeyboardButton(text='Google Forms', callback_data=poll_callback.new(platform='google_forms'))
+            InlineKeyboardButton(text='Google Forms', callback_data=poll_callback.new(platform='google_forms'), url=GOOGLE_FORM_LINK)
         ]
     ]
 )
