@@ -22,9 +22,9 @@ async def bot_info(message: types.Message):
 
 # УДАЛЕНИЕ СООБЕЩНИЙ
 
-@dp.message_handler()
-async def bot_delete(message: types.Message):
-    await bot.delete_message(message.chat.id, message.message_id-2)
+# @dp.message_handler()
+# async def bot_delete(message: types.Message):
+#     await bot.delete_message(message.chat.id, message.message_id-2)
 
 
 
