@@ -1,6 +1,6 @@
 from aiogram import types
 from loader import dp, bot
-
+from aiogram.types import CallbackQuery
 
 from keyboards.inline.inline_switсh_language import *
 from keyboards.inline.callback_datas import *
@@ -10,8 +10,7 @@ from filters.emoji import *
 # @dp.message_handler ловит только сообщение 'Получить информацию'
 @dp.message_handler(text=f'Получить информацию {emoji_information}')
 async def bot_info(message: types.Message):
-    # перменной text присваиваем строку, которую в дальнешем будем выводить
-    text = f'<b>Добро пожаловать в студию разработки Delpy Studio</b> {emoji_notebook}\n\n# НАПИСАТЬ ТЕКСТ'
+    text = 'Добро пожаловать в студию разработки Delpy Studio!\nРады вас видеть в нашем официальном телеграм боте Delpy Studio! Здесь вы сможете:\n- Посмотреть перечень наших услуг\n- Получить ссылку на наш Git Hub, Kwork\n- Задать вопрос нашим админам\n- Составить ваш заказ на Google forms'
     # в переменную photo присваиваем фото(как абсолютный путь), которое в дальнешем будем отправлять
     photo = 'media/Delpy.png'
     # методом message.answer_photo отправляем фото и передаем туда photo
