@@ -18,7 +18,7 @@ async def bot_info(message: types.Message):
     # методом message.answer отправляем текст и передаем туда text
     await message.answer(text, reply_markup=media_buttons)
     # await bot.delete_message(message.chat.id, message.message_id)
-    
+
 # УДАЛЕНИЕ СООБЕЩНИЙ
 
 # @dp.message_handler()
